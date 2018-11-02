@@ -18,7 +18,7 @@ class AddFkPlayerKillsGamersTable extends Migration
             $table->foreign('game_id')->references('id')->on('games');
             $table->foreign('killer_player_id')->references('id')->on('players');
             $table->foreign('killed_player_id')->references('id')->on('players');
-            $table->foreign('mode_id')->references('id')->on('modes');
+            $table->foreign('mode_id')->references('id')->on('killing_modes');
         }
          );
     }
