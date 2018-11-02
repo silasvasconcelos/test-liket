@@ -53,6 +53,17 @@ class LogReader
     }
 
     /**
+     * Get hash of file
+     *
+     * @return string Hash of file
+     **/
+    public function getHashFile()
+    {
+        $this->validateFile();
+        return sha1_file($this->getFilePath());
+    }
+
+    /**
      * Send an Exception if have any errors in the file.
      *
      * @return void
