@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use DB;
-use Exception;
 use App\KillingMode;
 
 class KillingModes extends Seeder
@@ -47,14 +45,14 @@ class KillingModes extends Seeder
     public function run()
     {
         try {
-            DB::beginTransaction();
+            \DB::beginTransaction();
             foreach ($this->modes as $id => $mode) {
                 KillingMode::updateOrCreate(compact('id'), compact('id', 'mode'));
             }
-            DB::commit();
+            \DB::commit();
         }
-        catch (Execption $e) {
-            DB::rollBack();
+        catch (\Execption $e) {
+            \DB::rollBack();
             $this->command->error($e->getMessage());
         }
     }
