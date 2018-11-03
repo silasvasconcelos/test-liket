@@ -12,3 +12,4 @@
 */
 
 Route::get('/', ['as' =>  'home', 'uses' => 'HomeController@index']);
+Route::get('/reports', ['as' =>  'reports', 'uses' => 'HomeController@reports']);
