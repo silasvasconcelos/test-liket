@@ -70,11 +70,23 @@ class GameModelTest extends TestCase
      */
     public function testDelete()
     {
-    	$game_factory = factory(Game::class)->create();
+        $game_factory = factory(Game::class)->create();
 
-    	Game::first()->delete();
+        Game::first()->delete();
 
         $this->assertDatabaseMissing($game_factory->getTable(), [ 'game_hash_file' => $game_factory->game_hash_file ]);
+    }
+
+    /**
+     * test name of the game
+     *
+     * @return void
+     */
+    public function testNameOfTheGame()
+    {
+    	$game_factory = factory(Game::class)->create();
+
+        $this->assertEquals($game_factory->name, sprintf("Game %s", $game_factory->getKey()));
     }
 
 }
