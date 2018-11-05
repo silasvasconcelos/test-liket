@@ -7,11 +7,11 @@ Project to test made in laravel 5.7
  - Nginx or Apache how reverse proxy (it's up to you)
 
 **Deploy:**
-clone this repository: `git clone https://github.com/silasvasconcelos/test-liket` 
-enter into the folder: `cd test-liket`
-copy env.example to .env: `php -r "copy('.env.example', '.env');"`
-generate APP_KEY: `php artisan key:generate`
-install packages with composer: `composer install`
+clone this repository: `git clone https://github.com/silasvasconcelos/test-liket`<br />
+enter into the folder: `cd test-liket`<br />
+copy env.example to .env: `php -r "copy('.env.example', '.env');"`<br />
+generate APP_KEY: `php artisan key:generate`<br />
+install packages with composer: `composer install`<br />
 
 **Configurer your Database connection on .env**
 
@@ -26,10 +26,9 @@ install packages with composer: `composer install`
 Run migrations and seeds: `php artisan migrate --seed`
 
 **Reading log file**
-puts the logs file into ***game_logs*** in the folder ***public***
+puts the logs file into ***game_logs*** in the folder ***public***<br />
 arter run the command `php artisan read-game-log` 
 
 **Running tests**
-Inside the project, run: `./vendor/bin/phpunit`  
-
+Inside the project, run: `./vendor/bin/phpunit`<br /><br />
 if you want run the application local, run `php artisan serve` after access `http://localhost:8000`
